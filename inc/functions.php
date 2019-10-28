@@ -1,8 +1,5 @@
 <?php
-// PHP - Random Quote Generator
 
-// Create the Multidimensional array of quote elements and name it quotes
-// Each inner array element should be an associative array
     $quotes = [
         [
             'quote' => 'Your most unhappy customers are your greatest source of learning.',
@@ -33,18 +30,17 @@
         ]
     ];
     
-    // Create the getRandomQuuote function and name it getRandomQuote
+    // get a random number 
     function getRandomQuote($quotes){
         return $quotes[random_int(0,5)];
     }    
     
-    
+    //print the quote
     function printQuote($quotes){
         $selectedQuote = getRandomQuote($quotes); 
-        //var_dump(getRandomQuote($quotes));
         echo "<p class='quote'>" . $selectedQuote['quote'] . '</p>';
         echo "<p class='source'>" . $selectedQuote['source'] ;
-
+        //check whether is a citation, year or tags
         if(isset($selectedQuote['citation'])){
             echo "<span class='citation'>" . $selectedQuote['citation'] . "</span>";
         }
@@ -58,7 +54,18 @@
         }
         echo "</p>";
     }
-    // Create the printQuote funtion and name it printQuote
+
+    function getRandomNumberColor(){
+        return random_int(0,255);
+    }
+    //get the random color number array and return it
+    function setRandomBackgroundColor(){
+        $randomRGBOne = getRandomNumberColor();
+        $randomRGBTwo = getRandomNumberColor();
+        $randomRGBThree = getRandomNumberColor();
+        $color = [$randomRGBOne, $randomRGBTwo, $randomRGBThree];
+        return $color;
+    }
 ?>
 
 
