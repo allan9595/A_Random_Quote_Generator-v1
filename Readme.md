@@ -12,7 +12,6 @@ The Random Quote Generator is written in php. The page refreshes every 4 seconds
 
 <img src='./screenshots/3.png' title='screenshot' width='' alt='screenshot' />
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## License
 
